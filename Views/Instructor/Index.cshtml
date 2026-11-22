@@ -1,0 +1,48 @@
+﻿@model List<Instructor>
+@{
+    ViewData["Title"] = "Instructors";
+}
+<div class="container">
+    <h2>Instructor Records</h2>
+    @if (TempData["Msg"] != null)
+    {
+        <div class="alert">@TempData["Msg"]</div>
+    }
+    <a asp-action="Create" class="btn">+ Add New Instructor</a>
+ 
+    <table class="data">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Designation</th>
+                <th>Majorship</th>
+                <th>Contact No.</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.FullName</td>
+                    <td>@i.Age</td>
+                    <td>@i.Gender</td>
+                    <td>@i.Designation</td>
+                    <td>@i.Majorship</td>
+                    <td>@i.ContactNumber</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@i.Id" class="btn btn-sm btn-secondary">View</a>
+                        <a asp-action="Edit" asp-route-id="@i.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@i.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+            @if (!Model.Any())
+            {
+                <tr><td colspan="7">No instructors yet. Click "Add New Instructor" to create one.</td></tr>
+            }
+        </tbody>
+    </table>
+</div>

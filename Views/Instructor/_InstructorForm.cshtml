@@ -1,0 +1,41 @@
+﻿@model Instructor
+ 
+<label asp-for="FullName" class="lbl"></label>
+<input asp-for="FullName" placeholder="e.g. Maria Santos" />
+<span asp-validation-for="FullName" class="field-error"></span>
+ 
+<label asp-for="Age" class="lbl"></label>
+<input asp-for="Age" placeholder="21 to 70" />
+<span asp-validation-for="Age" class="field-error"></span>
+ 
+<label asp-for="Address" class="lbl"></label>
+<input asp-for="Address" placeholder="e.g. 123 Rizal St., Balanga City, Bataan" />
+<span asp-validation-for="Address" class="field-error"></span>
+ 
+<label asp-for="Designation" class="lbl"></label>
+<input asp-for="Designation" placeholder="e.g. Instructor I" />
+<span asp-validation-for="Designation" class="field-error"></span>
+ 
+<label asp-for="Gender" class="lbl"></label>
+<select asp-for="Gender">
+    <option value="">-- Select gender --</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+</select>
+<span asp-validation-for="Gender" class="field-error"></span>
+ 
+<label asp-for="ContactNumber" class="lbl"></label>
+<input asp-for="ContactNumber" placeholder="e.g. 09171234567" />
+<span asp-validation-for="ContactNumber" class="field-error"></span>
+ 
+<label asp-for="Majorship" class="lbl"></label>
+<input asp-for="Majorship" placeholder="e.g. Information Technology" />
+<span asp-validation-for="Majorship" class="field-error"></span>
+ 
+<label asp-for="BachelorDegree" class="lbl"></label>
+<input asp-for="BachelorDegree" placeholder="e.g. Bachelor of Science in Information Technology" />
+<span asp-validation-for="BachelorDegree" class="field-error"></span>
+ 
+<label asp-for="EmailAddress" class="lbl"></label>
+<input asp-for="EmailAddress" placeholder="e.g. juan@school.edu" />
+<span asp-validation-for="EmailAddress" class="field-error"></span>

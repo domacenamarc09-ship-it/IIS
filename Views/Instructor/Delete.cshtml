@@ -1,0 +1,18 @@
+﻿@model Instructor
+@{
+    ViewData["Title"] = "Delete Instructor";
+}
+<div class="form-box wide">
+    <h2>Delete Instructor</h2>
+    <p class="error">Are you sure you want to delete this instructor? This cannot be undone.</p>
+    <table class="data">
+        <tr><th>Full Name</th><td>@Model.FullName</td></tr>
+        <tr><th>Designation</th><td>@Model.Designation</td></tr>
+        <tr><th>E-mail Address</th><td>@Model.EmailAddress</td></tr>
+    </table>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

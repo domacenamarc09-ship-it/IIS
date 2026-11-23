@@ -1,0 +1,172 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f2f4f8;
+}
+
+header {
+    background: #1f3a6e;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+}
+
+/* ----- form box ----- */
+.form-box {
+    width: 340px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #aaa;
+}
+
+    .form-box.wide {
+        width: 420px;
+    }
+
+    .form-box input:not([type=checkbox]), .form-box select {
+        width: 100%;
+        padding: 10px;
+        margin: 6px 0 2px;
+        box-sizing: border-box;
+    }
+
+.lbl {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* ----- buttons ----- */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1f3a6e;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background: #2d52a0;
+    }
+
+.btn-block {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    margin-top: 0;
+    font-size: 13px;
+}
+
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-warning {
+    background: #c27c0e;
+}
+
+.btn-danger {
+    background: #b3261e;
+}
+
+/* ----- validation and messages ----- */
+.field-error {
+    display: block;
+    color: #c00;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+.input-validation-error {
+    border: 1px solid #c00 !important;
+    background: #fff5f5;
+}
+
+.error {
+    color: red;
+}
+
+.alert {
+    background: #e6f4ea;
+    color: #1e6b34;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* ----- table (CRUD list) ----- */
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 30px auto;
+}
+
+table.data {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin: 12px 0;
+}
+
+    table.data th, table.data td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    table.data thead th {
+        background: #1f3a6e;
+        color: #fff;
+    }
+
+
+
+/* ----- dashboard polish ----- */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 140px;
+}
+
+    .card h3 {
+        font-size: 42px;
+        margin: 0 0 6px;
+        color: #1f3a6e;
+    }
+
+    .card p {
+        margin: 0 0 10px;
+        color: #444;
+    }
+
+.container h2 {
+    color: #1f3a6e;
+}
+

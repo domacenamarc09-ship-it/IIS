@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="container">
+    <h2>Welcome, @ViewBag.FullName!</h2>
+    @if (TempData["Msg"] != null)
+    {
+        <div class="alert">@TempData["Msg"]</div>
+    }
+    <div class="card-row">
+        <div class="card">
+            <h3>@ViewBag.TotalInstructors</h3>
+            <p>Instructor records in the database</p>
+        </div>
+        <div class="card">
+            <p>Add, view, edit, or delete instructor profiles.</p>
+            <a asp-controller="Instructor" asp-action="Index" class="btn">Manage Instructors</a>
+        </div>
+    </div>
+    <a asp-action="Logout" class="btn btn-secondary">Logout</a>
+</div>
